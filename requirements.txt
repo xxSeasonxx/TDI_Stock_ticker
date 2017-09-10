@@ -1,8 +1,8 @@
 gunicorn==19.3.0
 requests==2.9.1
+bokeh==0.12.7 
 python
 pandas
-bokeh==0.12.7 
 flask
 jinja2
 pip
