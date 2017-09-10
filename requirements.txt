@@ -1,7 +1,6 @@
 gunicorn==19.3.0
 requests==2.9.1
 bokeh==0.12.7 
-bokeh-widgets==0.12.7
 python
 dill
 pandas==0.20.3
