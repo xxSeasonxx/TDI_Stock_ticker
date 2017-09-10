@@ -7,27 +7,28 @@ from bokeh.plotting import figure, output_file, show
 
 app = Flask(__name__)
 
-# Load the Iris Data Set
-#iris_df = pd.read_csv("data/iris.data",
-#                      names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Species"])
 
 tday = '20170911'
 bday = '20170611'
 feature_names = ['Adjusted Open', 'Adjusted High', 'Adjusted Low', 'Adjusted Closed']
 
 # Create the main plot
-def create_figure(current_feature_name,current_df):
-    #    p = Histogram(iris_df, current_feature_name, title=current_feature_name, color='Species',
-    #                  bins=bins, legend='top_right', width=600, height=400)
+def create_figure(current_feature_name,current_stock_name,current_df):
+
+    current_df['date'] = pd.to_datetime(current_df['date'])
+    
+    # Title
+    pname = 'Stock '+ current_stock_name + ' at ' + current_feature_name + ' price.'
+    
+    # create a new plot with a datetime axis type
+    p = figure(plot_width=800, plot_height=250, x_axis_type="datetime",title=pname)
     
     # Set the x axis label
-    #    p.xaxis.axis_label = current_feature_name
+    p.xaxis.axis_label = 'Date'
     
     # Set the y axis label
-    #    p.yaxis.axis_label = 'Count'
-    current_df['date'] = pd.to_datetime(current_df['date'])
-    # create a new plot with a datetime axis type
-    p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
+    p.yaxis.axis_label = current_feature_name
+    
     p.line(current_df['date'], current_df[current_feature_name], color='navy', alpha=0.5)
     
     return p
@@ -63,7 +64,7 @@ def index():
     df = pd.DataFrame(t['data'],columns=[ d['name'] for d in t['columns']] )
 
     # Create the plot
-    plot = create_figure(current_feature_name, df)
+    plot = create_figure(current_feature_name,current_stock_name, df)
     
     # Embed plot into HTML via Flask Render
     script, div = components(plot)
