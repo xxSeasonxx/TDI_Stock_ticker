@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import pandas as pd
-#from bokeh.charts import Histogram
 from bokeh.embed import components
 import requests
 from bokeh.plotting import figure, output_file, show
@@ -54,8 +53,8 @@ def index():
     current_stock_name = request.args.get("current_stock" )
     if current_stock_name == None:
         current_stock_name = 'MSFT'
-    #
-    #    ticker = 'MSFT'
+    
+    # Request Data from Quandl
     url = 'https://www.quandl.com/api/v3/datatables/WIKI/PRICES.json?date.gte=' \
         + bday + '&date.lt=' + tday + '&ticker=' + current_stock_name + '&api_key=N_7w_cTE9bSpuy-9U6PG'
     r = requests.get(url)

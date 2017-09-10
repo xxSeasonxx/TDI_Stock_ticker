@@ -34,41 +34,41 @@ rel="stylesheet" type="text/css">
 
 </head>
 <body>
-    
-    <header id="fh5co-header" role="banner">
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-    <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-    <div class="navbar-header">
-    <!-- Mobile Toggle Menu Button -->
-    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-    <a class="navbar-brand" href="index.html">The Data Incubator</a>
-    </div>
-    <div id="fh5co-navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li>
-                            <li><a href="https://github.com/xxSeasonxx/TDI_Stock_ticker"><span>Github <span class="border"></span></span></a></li>
-                            <li><a href="https://www.thedataincubator.com/12day.html"><span>12th Day <span class="border"></span></span></a></li>
-                            </ul>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </nav>
-                            </header>
+
+<header id="fh5co-header" role="banner">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="navbar-header">
+<!-- Mobile Toggle Menu Button -->
+<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+<a class="navbar-brand" href="index.html">The Data Incubator</a>
+</div>
+<div id="fh5co-navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li>
+        <li><a href="https://github.com/xxSeasonxx/TDI_Stock_ticker"><span>Github <span class="border"></span></span></a></li>
+        <li><a href="https://www.thedataincubator.com/12day.html"><span>12th Day <span class="border"></span></span></a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </nav>
+        </header>
 
 <div id="fh5co-main">
 
 <center>        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>Stock Ticker Price Graphing</h1>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h1>Stock Ticker Price Graphing</h1>
 <!--                    <p class="">100% Free HTML5 Template by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></p>-->
-                </div>
-            </div>
-        </div>
-    
+</div>
+</div>
+</div>
+
 <!--    <center>-->
 <!--    <form action="/">-->
 <!--    <a href="http://www.marketwatch.com/tools/quotes/lookup.asp">Here for symbols lookup</a>-->
@@ -96,39 +96,39 @@ rel="stylesheet" type="text/css">
 <!--        {{ div|safe }}-->
 <!--        -->
 
-        <form action="/">
-            <p>
-            <a href="http://www.marketwatch.com/tools/quotes/lookup.asp">Here for stocks symbols lookup</a>
-            <p>Please enter desired stock symbol: <input type='text' name="current_stock" placeholder = "{{current_stock}}"/></p>
-            </p>
-            <p>
-            Please select desired prices' index: <select name="feature_name">
-                {% for feature in feature_names %}
-                {% if feature == current_feature_name %}
-                <option selected value="{{ feature }}">{{ feature }}</option>
-                {% else %}
-                <option value="{{ feature }}">{{ feature }}</option>
-                {% endif %}
-                {% endfor %}
-            </select>
-            </p>
-            <p>
-            <input type="submit">
-                </p>
-                </form>
-        
-        {{ script|safe }}
-        {{ div|safe }}
-        
+<form action="/">
+<p>
+<a href="http://www.marketwatch.com/tools/quotes/lookup.asp">Here for stocks symbols lookup</a>
+<p>Please enter desired stock symbol: <input type='text' name="current_stock" placeholder = "{{current_stock}}"/></p>
+</p>
+<p>
+Please select desired prices' index: <select name="feature_name">
+{% for feature in feature_names %}
+{% if feature == current_feature_name %}
+<option selected value="{{ feature }}">{{ feature }}</option>
+{% else %}
+<option value="{{ feature }}">{{ feature }}</option>
+{% endif %}
+{% endfor %}
+</select>
+</p>
+<p>
+<input type="submit">
+</p>
+</form>
+
+{{ script|safe }}
+{{ div|safe }}
+
 
 <footer id="fh5co-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-                <p>Created by Season Yang </p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1 text-center">
+<p>Created by Season Yang </p>
+</div>
+</div>
+</div>
 </footer>
 
 
