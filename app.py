@@ -13,14 +13,6 @@ app = Flask(__name__)
 
 tday = '20170911'
 bday = '20170611'
-#ticker = 'MSFT'
-#url = 'https://www.quandl.com/api/v3/datatables/WIKI/PRICES.json?date.gte=' \
-#    + bday + '&date.lt=' + tday + '&ticker=' + ticker + '&api_key=N_7w_cTE9bSpuy-9U6PG'
-## url = 'https://www.quandl.com/api/v3/datatables/WIKI/PRICES.json?date.gte=20150101&date.lt=20160101&ticker=MSFT&api_key=N_7w_cTE9bSpuy-9U6PG'
-#r = requests.get(url)
-#j = r.json()
-#t = j['datatable']
-#df = pd.DataFrame(t['data'],columns=[ d['name'] for d in t['columns']] )
 feature_names = ['Adjusted Open', 'Adjusted High', 'Adjusted Low', 'Adjusted Closed']
 
 # Create the main plot
