@@ -70,8 +70,8 @@ def index():
     t = j['datatable']
     df = pd.DataFrame(t['data'],columns=[ d['name'] for d in t['columns']] )
 
-# Create the plot
-plot = create_figure(current_feature_name, df)
+    # Create the plot
+    plot = create_figure(current_feature_name, df)
     
     # Embed plot into HTML via Flask Render
     script, div = components(plot)
